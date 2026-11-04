@@ -360,6 +360,18 @@ details.faq p { margin: 14px 0 0; max-width: 70ch; }
 }
 .glow.on { opacity: 1; }
 
+/* ---------- Giving chips ---------- */
+.chips { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; justify-content: center; }
+.chip {
+  padding: 15px 22px; border-radius: 999px; border: 1px solid var(--line); text-decoration: none;
+  font: 700 1rem/1 var(--display); color: var(--ink); background: rgba(255, 255, 255, 0.03);
+  transition: border-color .3s, color .3s, transform .3s var(--ease), background .3s;
+}
+.chip:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
+.chip.big { background: var(--accent); color: #0a0a0a; border-color: transparent; }
+.chip.big:hover { color: #0a0a0a; background: #ffc553; }
+.chip-note { margin-top: 16px; font-size: .9rem; color: var(--muted); text-align: center; }
+
 /* ---------- Honeypot (hidden from people, visible to bots) ---------- */
 .hp { position: absolute !important; left: -10000px !important; width: 1px; height: 1px; overflow: hidden; }
 

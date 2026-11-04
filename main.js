@@ -198,7 +198,7 @@
         // No backend connected yet: say so honestly instead of pretending it sent.
         if (status) {
           status.className = "form-status show warn";
-          status.innerHTML = "This form isn't connected to an inbox yet. Email <a href=\"mailto:hello@puttoolsinschools.org\">hello@puttoolsinschools.org</a> in the meantime.";
+          status.innerHTML = "This form isn't connected yet. Call Ray Terry at <a href=\"tel:+17047124644\">(704) 712-4644</a> in the meantime.";
         }
         return;
       }

@@ -1,49 +1,39 @@
 # Put Tools In Schools: website
 
-A multi-page static site (plain HTML, CSS, and JavaScript). There is no build step, so GitHub Pages can serve it directly.
+A multi-page static site (plain HTML, CSS, and JavaScript). There is no build step, so GitHub Pages can serve it directly from the repo root.
+
+Content is based on the organization's own donate page, its news posts, and the public WCCB Charlotte segment. Give and sponsor buttons link to the live pages on puttoolsinschools.org.
 
 ## Pages
 
-- `index.html`: home (hero, stats, programs, how it works, CTA)
-- `about.html`: story and principles
-- `programs.html`: tool drives, teacher training, student labs, catalog, FAQ
-- `get-involved.html`: volunteer, donate, and partner sections
-- `contact.html`: request form (schools, volunteers, donors, partners)
-- `resources.html`: guides and FAQ (items marked "Coming soon")
+- `index.html`: home (purpose, recent field news, giving, Career Day call to action)
+- `about.html`: purpose and where we show up
+- `programs.html`: Career Days and Tool Box Work Days
+- `get-involved.html`: give, sponsor, and volunteer
+- `news.html`: links to recent posts
+- `contact.html`: message form, phone, and mailing address
 - `404.html`: not-found page
 
-Shared styles live in `styles.css`. Behaviour (menu, reveals, counters, forms) lives in `main.js`. Colours and fonts are CSS variables at the top of `styles.css`.
+Shared styles are in `styles.css`. Behaviour (menu, reveals, counters, form checks) is in `main.js`. Colours and fonts are CSS variables at the top of `styles.css`.
 
-## Before you launch: replace placeholders
+## Before launch
 
-- **Stats** (`index.html`, the `data-count` numbers): currently placeholder figures. Replace them with real numbers, or remove the stat cards.
-- **Donation amounts** (`get-involved.html`): $50, $250, and $1,000 are examples. Update them to match real costs.
-- **Mission line and copy**: the wording was drafted without your materials. Check every claim before it goes live.
-- **Email**: `hello@puttoolsinschools.org` appears in several places. Confirm the address exists, or change it everywhere (search the folder for `hello@`).
-- **Donations**: online giving is not connected. The donate buttons open an email. Add a payment or donation link when you have one.
-- **Resources**: the entries are placeholders marked "Coming soon". Link them when the files exist.
+- **Contact form**: not connected yet. Paste a form endpoint (for example a Formspree URL) into the `data-endpoint` attribute on the form in `contact.html`. Until then the form tells visitors to call Ray Terry.
+- **Contact details**: the phone number and mailing address come from the donate page. Confirm they are current, and add an email address if you want one shown.
+- **Donation amounts**: the $5, $10, $25, $50, and $100 buttons mirror the donate page. Update them if the donate page changes.
+- **Recent field news**: titles and short descriptions are paraphrased from the posts. Check them against the posts before launch.
 
-## Put it on GitHub Pages
+## GitHub Pages
 
-1. Create a repository (for example `puttoolsinschools-site`) and push these files to its root on `main`.
-2. In the repo: **Settings > Pages > Build and deployment**. Set Source to "Deploy from a branch", Branch to `main`, and folder to `/ (root)`.
-3. Wait for the first deploy. The site will be at `https://<your-username>.github.io/<repo-name>/`.
+1. Push these files to the root of a public repo on `main`.
+2. In the repo, go to **Settings > Pages**. Set Source to "Deploy from a branch", Branch to `main`, and folder to `/ (root)`.
+3. The site will be at `https://<your-username>.github.io/<repo-name>/`. Open `index.html` if the bare address is cached from an earlier redirect.
 
 ### Custom domain
 
-- For a test domain (for example `vigilantintegratedsecurity.xyz`) or the real one (`puttoolsinschools.org`), add a file named `CNAME` in the root containing that one domain, such as `puttoolsinschools.org`.
-- Also set the same domain under **Settings > Pages > Custom domain** and tick "Enforce HTTPS" once the certificate is ready.
-- At your DNS provider, point the domain to GitHub Pages. For an apex domain, use GitHub's A records. For `www`, use a CNAME to `<your-username>.github.io`. GitHub's Pages documentation lists the current IP addresses.
-
-## Connect the contact form
-
-The form works in the browser but does not send anywhere until you connect it. The easiest free option is Formspree.
-
-1. Create a form at formspree.io and copy its endpoint URL.
-2. In `contact.html`, set `data-endpoint=""` on the `<form>` element to that URL.
-3. Submissions will then be delivered to your inbox.
-
-Until then the form shows a message pointing visitors to email. It does not pretend to send.
+- To use a custom domain, add a file named `CNAME` in the root with that one domain on its own line, such as `vigilantintegratedsecurity.xyz`. Also set the same domain under **Settings > Pages > Custom domain**.
+- At your DNS provider, point the domain to GitHub Pages. For an apex domain, add GitHub's four A records. For `www`, add a CNAME to `<your-username>.github.io`. GitHub's Pages documentation lists the current IP addresses.
+- Enforce HTTPS once the certificate is ready.
 
 ## Test locally
 
