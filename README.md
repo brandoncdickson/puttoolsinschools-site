@@ -14,7 +14,7 @@ Content is based on the organization's own donate page, its news posts, and the 
 - `contact.html`: message form, phone, and mailing address
 - `404.html`: not-found page
 
-Shared styles are in `styles.css`. Behaviour (menu, reveals, counters, form checks) is in `main.js`. Colours and fonts are CSS variables at the top of `styles.css`.
+Shared styles are in `styles.css`. Behaviour (menu, reveals, counters, form checks) is in `main.js`. Decorative effects (hero sparks, cursor ring, magnetic buttons, letter reveals, trade switcher) are in `effects.js`, which does nothing when a visitor has reduced motion turned on. Colours and fonts are CSS variables at the top of `styles.css`.
 
 ## Before launch
 
