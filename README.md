@@ -19,11 +19,17 @@ Shared styles are in `styles.css`. Behaviour (menu, reveals, counters, form chec
 
 ## Updating styles or scripts
 
-Every page loads `styles.css?v=6`, `main.js?v=6`, and `effects.js?v=6`, and the home and events pages also load `events.js?v=6`. When you change any of those files, raise the number in every page (for example to `?v=7`).
+Every page loads `styles.css?v=7`, `main.js?v=7`, and `effects.js?v=7`, and the home and events pages also load `events.js?v=7`. When you change any of those files, raise the number in every page (for example to `?v=8`). Otherwise browsers can mix new HTML with a cached old stylesheet and the layout breaks.
+
+## Logo and colors
+
+The logo currently loads from the organization's Wix image server (`static.wixstatic.com/.../5fabbb_0d6992d029d3422f8bc377b1ca70987f~mv2.png`). To make the site independent of Wix, add the logo to this repo as `logo.png` and replace that URL with `logo.png` in every page.
+
+The color scheme comes from the logo: toolbox red (`--accent`), tool-handle gold (`--accent-2`), steel (`--accent-3`), and deep red (`--deep`). Change them at the top of `styles.css`.
 
 ## Updating events
 
-Upcoming events live in one list at the top of `events.js`. Each entry has a title, start and end time (Charlotte local time, `-05:00` in winter and `-04:00` in summer), place, address, an optional note, and a link to the event's page on puttoolsinschools.org. The home page countdown and both event lists read from that list, and past events hide themselves automatically. Otherwise browsers can mix new HTML with a cached old stylesheet and the layout breaks.
+Upcoming events live in one list at the top of `events.js`. Each entry has a title, start and end time (Charlotte local time, `-05:00` in winter and `-04:00` in summer), place, address, an optional note, and a link to the event's page on puttoolsinschools.org. The home page countdown and both event lists read from that list, and past events hide themselves automatically.
 
 ## Before launch
 

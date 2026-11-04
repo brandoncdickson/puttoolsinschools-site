@@ -91,7 +91,7 @@
         vy: Math.sin(a) * s - 0.3,
         life: 1,
         size: Math.random() * 2.2 + 0.6,
-        hue: Math.random() < 0.5 ? 40 : 165
+        hue: Math.random() < 0.6 ? 356 : 40
       });
       if (parts.length > 260) parts.splice(0, parts.length - 260);
     }
