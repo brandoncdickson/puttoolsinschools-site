@@ -16,6 +16,10 @@ Content is based on the organization's own donate page, its news posts, and the 
 
 Shared styles are in `styles.css`. Behaviour (menu, reveals, counters, form checks) is in `main.js`. Decorative effects (hero sparks, cursor ring, magnetic buttons, letter reveals, trade switcher) are in `effects.js`, which does nothing when a visitor has reduced motion turned on. Colours and fonts are CSS variables at the top of `styles.css`.
 
+## Updating styles or scripts
+
+Every page loads `styles.css?v=5`, `main.js?v=5`, and `effects.js?v=5`. When you change any of those files, raise the number in every page (for example to `?v=6`). Otherwise browsers can mix new HTML with a cached old stylesheet and the layout breaks.
+
 ## Before launch
 
 - **Contact form**: not connected yet. Paste a form endpoint (for example a Formspree URL) into the `data-endpoint` attribute on the form in `contact.html`. Until then the form tells visitors to call Ray Terry.
