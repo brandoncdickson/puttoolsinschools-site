@@ -168,6 +168,21 @@
     });
   }
 
+  /* ---------- Timeline progress line ---------- */
+  var timelines = document.querySelectorAll(".timeline");
+  if (timelines.length) {
+    var tickTimeline = function () {
+      timelines.forEach(function (t) {
+        var r = t.getBoundingClientRect();
+        var p = (window.innerHeight * 0.6 - r.top) / r.height;
+        t.style.setProperty("--p", Math.max(0, Math.min(1, p)).toFixed(3));
+      });
+    };
+    window.addEventListener("scroll", tickTimeline, { passive: true });
+    window.addEventListener("resize", tickTimeline);
+    tickTimeline();
+  }
+
   /* ---------- Trade switcher ---------- */
   document.querySelectorAll("[data-trades]").forEach(function (root) {
     var tabs = Array.prototype.slice.call(root.querySelectorAll("[data-trade-tab]"));

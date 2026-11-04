@@ -5,15 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script>document.documentElement.classList.add("js");</script>
   <title>Get involved | Put Tools In Schools</title>
-  <meta name="description" content="Give, sponsor, or volunteer with Put Tools In Schools, a Charlotte, NC 501(c)(3) that introduces students to the trades.">
+  <meta name="description" content="Donate, volunteer, sponsor, or bring your trade to a Career Day with Put Tools In Schools in Charlotte, NC.">
   <meta name="theme-color" content="#07090d">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23ffb020'/%3E%3Cpath d='M17 5 8 18h7l-1 9 9-13h-7z' fill='%2307090d'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=5">
-  <script src="main.js?v=5" defer></script>
-  <script src="effects.js?v=5" defer></script>
+  <link rel="stylesheet" href="styles.css?v=6">
+  <script src="main.js?v=6" defer></script>
+  <script src="effects.js?v=6" defer></script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -30,6 +30,7 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="programs.html">Programs</a></li>
+          <li><a href="events.html">Events</a></li>
           <li><a href="get-involved.html" aria-current="page">Get involved</a></li>
           <li><a href="news.html">News</a></li>
           <li><a href="contact.html">Contact</a></li>
@@ -41,16 +42,17 @@
 
   <main id="main">
     <section class="page-hero">
-      <div class="blob b1" aria-hidden="true" style="position:absolute;width:60vmax;height:60vmax;border-radius:50%;filter:blur(80px);opacity:.28;top:-25%;right:-15%;background:radial-gradient(circle,var(--accent),transparent 60%);z-index:-1"></div>
+      <div aria-hidden="true" style="position:absolute;width:60vmax;height:60vmax;border-radius:50%;filter:blur(80px);opacity:.28;top:-25%;right:-15%;background:radial-gradient(circle,var(--accent),transparent 60%);z-index:-1"></div>
       <div class="wrap">
         <p class="crumbs"><a href="index.html">Home</a> / Get involved</p>
         <p class="eyebrow">Get involved</p>
-        <h1>Give, sponsor, <span class="grad-text">or volunteer.</span></h1>
-        <p class="lead reveal" style="margin-top:24px">Every gift and every work day helps bring the trades to students. Pick the way you'd like to help.</p>
+        <h1>Give, volunteer, sponsor, <span class="grad-text">or teach.</span></h1>
+        <p class="lead reveal" style="margin-top:24px">Our community is our strength. Pick the way you'd like to help students find their path into the trades.</p>
         <div class="btn-row reveal" style="--d:150ms">
           <a class="btn btn-primary" href="#give">Give <span class="arrow" aria-hidden="true">&rarr;</span></a>
-          <a class="btn btn-ghost" href="#sponsor">Sponsor</a>
           <a class="btn btn-ghost" href="#volunteer">Volunteer</a>
+          <a class="btn btn-ghost" href="#sponsor">Sponsor</a>
+          <a class="btn btn-ghost" href="#industry">Industry sign-up</a>
         </div>
       </div>
     </section>
@@ -59,8 +61,8 @@
       <div class="wrap">
         <div class="panel reveal" style="text-align:center;max-width:820px;margin-inline:auto">
           <p class="eyebrow" style="justify-content:center">Give</p>
-          <h2 style="font-size:clamp(1.8rem,4vw,2.8rem)">Give once, weekly, monthly, or yearly.</h2>
-          <p class="lead" style="margin-inline:auto">Gifts to a 501(c)(3) may be tax-deductible, so check with your tax advisor.</p>
+          <h2 data-letters style="font-size:clamp(1.8rem,4vw,2.8rem)">Give once, weekly, monthly, or yearly.</h2>
+          <p class="lead" style="margin-inline:auto">Our events and outreach take real resources, and your gift helps us reach more students. Gifts to a 501(c)(3) may be tax-deductible, so check with your tax advisor.</p>
           <div class="chips">
             <a class="chip" href="https://www.puttoolsinschools.org/donate">$5</a>
             <a class="chip" href="https://www.puttoolsinschools.org/donate">$10</a>
@@ -74,41 +76,49 @@
       </div>
     </section>
 
-    <section class="section muted-bg" id="sponsor">
-      <div class="wrap split">
-        <div class="reveal">
-          <p class="eyebrow">Sponsor</p>
-          <h2>Put your name behind <span class="grad-text">the trades</span></h2>
-          <p class="lead">Businesses and organizations can sponsor our work. Our sponsors page lists current options.</p>
-          <div class="btn-row"><a class="btn btn-primary" href="https://www.puttoolsinschools.org/studio-2">See sponsor options <span class="arrow" aria-hidden="true">&rarr;</span></a></div>
-        </div>
-        <div class="panel reveal" style="--d:150ms">
-          <h3>Donated materials make a difference</h3>
-          <p>Local businesses have supported our work with donated materials. Precision Plumbing donated the copper pipe that Mint Hill Middle School students used to build a copper sculpture.</p>
+    <section class="section muted-bg">
+      <svg class="gear g-r" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="50" cy="50" r="46" stroke-dasharray="4 6"/><circle cx="50" cy="50" r="34"/><circle cx="50" cy="50" r="12"/></svg>
+      <div class="wrap">
+        <div class="grid-3">
+          <article class="card reveal" id="volunteer">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 7a3 3 0 1 0 6 0 3 3 0 0 0-6 0"/><path d="M3 21v-1a6 6 0 0 1 6-6h6a6 6 0 0 1 6 6v1"/></svg></div>
+            <span class="tag">Volunteer</span>
+            <h3>Share your skills</h3>
+            <p>Share your expertise with students, or help set up and break down events. Volunteers also keep the Tool Box ready on work days.</p>
+            <a class="more" href="https://www.puttoolsinschools.org/support">Volunteer sign-up <span aria-hidden="true">&rarr;</span></a>
+          </article>
+          <article class="card reveal" style="--d:120ms" id="sponsor">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-4.5-9.5-9A5 5 0 0 1 12 6a5 5 0 0 1 9.5 6c-2.5 4.5-9.5 9-9.5 9z"/></svg></div>
+            <span class="tag">Sponsor</span>
+            <h3>Back the mission</h3>
+            <p>Your business can sponsor a live event, our marketing efforts, or this website, or supply tools, equipment, and time.</p>
+            <a class="more" href="https://www.puttoolsinschools.org/support">Sponsor now <span aria-hidden="true">&rarr;</span></a>
+          </article>
+          <article class="card reveal" style="--d:240ms" id="industry">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg></div>
+            <span class="tag">Industry leaders</span>
+            <h3>Bring your trade to a Career Day</h3>
+            <p>Raise awareness of careers in your field. Students get hands-on time with tools, guided by your professionals.</p>
+            <a class="more" href="https://www.puttoolsinschools.org/support">Industry sign-up <span aria-hidden="true">&rarr;</span></a>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section" id="volunteer">
-      <div class="wrap">
-        <div class="center reveal">
-          <p class="eyebrow">Volunteer</p>
-          <h2>Give your time to <span class="grad-text">the work</span></h2>
-          <p class="lead">Volunteer on a Tool Box Work Day, or tell us how else you'd like to help.</p>
+    <section class="section">
+      <div class="wrap split">
+        <div class="reveal">
+          <p class="eyebrow">Our sponsors</p>
+          <h2>Local businesses <span class="grad-text">already back us</span></h2>
+          <p class="lead">Local businesses support our events with instructors, tools, equipment, and sponsorships. Precision Plumbing, for example, donated the copper pipe Mint Hill Middle School students used to build a sculpture.</p>
+          <div class="btn-row">
+            <a class="btn btn-primary" href="https://www.puttoolsinschools.org/studio-2">See our sponsors <span class="arrow" aria-hidden="true">&rarr;</span></a>
+          </div>
         </div>
-        <div class="grid-2" style="margin-top:56px">
-          <article class="card reveal">
-            <span class="tag">Tool Box Work Days</span>
-            <h3>Prepare the tools</h3>
-            <p>Volunteers prepare the tool boxes that connect students to the trades and their tools.</p>
-            <a class="more" href="contact.html?topic=volunteer">Sign up <span aria-hidden="true">&rarr;</span></a>
-          </article>
-          <article class="card reveal" style="--d:120ms">
-            <span class="tag">Something else</span>
-            <h3>Have a different skill?</h3>
-            <p>Trades professionals, teachers, and anyone who wants to help students find a path can get in touch.</p>
-            <a class="more" href="contact.html?topic=volunteer">Get in touch <span aria-hidden="true">&rarr;</span></a>
-          </article>
+        <div class="panel reveal" style="--d:150ms">
+          <h3>Spread the word</h3>
+          <p>Follow, like, and share our posts, and subscribe for email updates about upcoming events.</p>
+          <a class="more" href="https://www.puttoolsinschools.org/support">Subscribe <span aria-hidden="true">&rarr;</span></a>
         </div>
       </div>
     </section>
@@ -119,15 +129,15 @@
       <div class="footer-grid">
         <div>
           <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="#07090d"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg></span><span>Put Tools In Schools</span></a>
-          <p style="margin-top:18px;max-width:34ch">A Charlotte, NC 501(c)(3) nonprofit introducing students to the trades.</p>
+          <p style="margin-top:18px;max-width:34ch">Connecting students to careers in the trades. A Charlotte, NC 501(c)(3) since 2021.</p>
         </div>
         <div>
           <h4>Explore</h4>
-          <ul><li><a href="about.html">About</a></li><li><a href="programs.html">Programs</a></li><li><a href="news.html">News</a></li></ul>
+          <ul><li><a href="about.html">About</a></li><li><a href="programs.html">Programs</a></li><li><a href="events.html">Events</a></li><li><a href="news.html">News</a></li></ul>
         </div>
         <div>
           <h4>Get involved</h4>
-          <ul><li><a href="https://www.puttoolsinschools.org/donate">Donate</a></li><li><a href="https://www.puttoolsinschools.org/studio-2">Sponsors</a></li><li><a href="get-involved.html#volunteer">Volunteer</a></li></ul>
+          <ul><li><a href="https://www.puttoolsinschools.org/donate">Donate</a></li><li><a href="get-involved.html#sponsor">Sponsor</a></li><li><a href="get-involved.html#volunteer">Volunteer</a></li><li><a href="get-involved.html#industry">Industry sign-up</a></li></ul>
         </div>
         <div>
           <h4>Contact</h4>

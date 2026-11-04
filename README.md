@@ -2,14 +2,15 @@
 
 A multi-page static site (plain HTML, CSS, and JavaScript). There is no build step, so GitHub Pages can serve it directly from the repo root.
 
-Content is based on the organization's own donate page, its news posts, and the public WCCB Charlotte segment. Give and sponsor buttons link to the live pages on puttoolsinschools.org.
+Content comes from the organization's current site (About, Events, Support, Sponsors, Resources, and blog) and the WCCB Charlotte segment. Donate, sponsor, volunteer, and industry sign-up buttons link to the live pages and forms on puttoolsinschools.org.
 
 ## Pages
 
 - `index.html`: home (purpose, recent field news, giving, Career Day call to action)
 - `about.html`: purpose and where we show up
 - `programs.html`: Career Days and Tool Box Work Days
-- `get-involved.html`: give, sponsor, and volunteer
+- `events.html`: next-event countdown and the upcoming events list
+- `get-involved.html`: give, volunteer, sponsor, and industry sign-up
 - `news.html`: links to recent posts
 - `contact.html`: message form, phone, and mailing address
 - `404.html`: not-found page
@@ -18,7 +19,11 @@ Shared styles are in `styles.css`. Behaviour (menu, reveals, counters, form chec
 
 ## Updating styles or scripts
 
-Every page loads `styles.css?v=5`, `main.js?v=5`, and `effects.js?v=5`. When you change any of those files, raise the number in every page (for example to `?v=6`). Otherwise browsers can mix new HTML with a cached old stylesheet and the layout breaks.
+Every page loads `styles.css?v=6`, `main.js?v=6`, and `effects.js?v=6`, and the home and events pages also load `events.js?v=6`. When you change any of those files, raise the number in every page (for example to `?v=7`).
+
+## Updating events
+
+Upcoming events live in one list at the top of `events.js`. Each entry has a title, start and end time (Charlotte local time, `-05:00` in winter and `-04:00` in summer), place, address, an optional note, and a link to the event's page on puttoolsinschools.org. The home page countdown and both event lists read from that list, and past events hide themselves automatically. Otherwise browsers can mix new HTML with a cached old stylesheet and the layout breaks.
 
 ## Before launch
 
